@@ -1,13 +1,19 @@
 <template>
     <div>
-        <input/>
+        <input v-on:input="onInput"/>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'Search Bar'
-}
+    name: 'Search-Bar',
+
+    methods: {
+        onInput: function(event) {
+            window.console.log(event.target.value)
+        }
+    }
+};
 </script>
 
 <style>
